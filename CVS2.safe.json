@@ -1,0 +1,525 @@
+{
+  "Name": "CVS2",
+  "CreationDate": "2021-4-2",
+  "Commands": [
+    {
+      "Command": "store",
+      "Target": "0",
+      "Value": "loopcount"
+    },
+    {
+      "Command": "do",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "60000",
+      "Value": ""
+    },
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!statusOK"
+    },
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "return Number (${loopcount})+1",
+      "Value": "loopcount"
+    },
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "return Number (${loopcount})%25",
+      "Value": "loopremainder"
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${loopremainder}==0",
+      "Value": ""
+    },
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "var xhttp = new XMLHttpRequest(); \nxhttp.onreadystatechange = function() {\n  if (this.readyState == 4 && this.status == 200) {\n    void(0);\n  }\n};\nxhttp.open(\"POST\", \"https://api.pushover.net/1/messages.json\", true);\nxhttp.setRequestHeader(\"Content-type\", \"application/x-www-form-urlencoded\");\nxhttp.send(\"token=PUSHOVERTOKEN&user=PUSHOVERUSER&message=${loopcount}\");",
+      "Value": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "selectWindow",
+      "Target": "TAB=CLOSEALLOTHER",
+      "Value": ""
+    },
+    {
+      "Command": "deleteAllCookies",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://www.cvs.com/",
+      "Value": ""
+    },
+    {
+      "Command": "store",
+      "Target": "2",
+      "Value": "!TIMEOUT_WAIT"
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "linkText=Check vaccine availability",
+      "Value": "",
+      "Targets": [
+        "linkText=Check vaccine availability",
+        "xpath=//*[@id=\"week47-32705-acn-promo-covid\"]/div/div/a[2]",
+        "xpath=//div/a[2]",
+        "css=#week47-32705-acn-promo-covid > div > div > a.promobtn.promobtn1.red-outline-transparent-btn.red-txt.acn-button.acn-ML24"
+      ]
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"uuidb784908b-4516-4648-9b98-0fb535dec722\"]/div/div[2]/div/div/div/div/div/ul/li[9]/div/a/span",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"uuidb784908b-4516-4648-9b98-0fb535dec722\"]/div/div[2]/div/div/div/div/div/ul/li[9]/div/a/span",
+        "xpath=//li[9]/div/a/span",
+        "css=#uuidb784908b-4516-4648-9b98-0fb535dec722 > div > div.content_wrapper > div > div > div > div > div:nth-child(1) > ul > li:nth-child(9) > div > a > span"
+      ]
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "xpath=//*[@id=\"vaccineinfo-FL\"]/div/div/div/div/div[2]/div/div/div[2]/div/div[3]/div/p[2]/a/strong",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"vaccineinfo-FL\"]/div/div/div/div/div[2]/div/div/div[2]/div/div[3]/div/p[2]/a/strong",
+        "xpath=//div[22]/div/div/div/div/div/div/div[2]/div/div/div[2]/div/div[3]/div/p[2]/a/strong",
+        "css=#vaccineinfo-FL > div > div > div > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.box.parbase.aem-GridColumn.aem-GridColumn--default--12 > div > div > div.content__wrapper.parsecondary > div > div:nth-child(3) > div > p:nth-child(2) > a > strong"
+      ]
+    },
+    {
+      "Command": "type",
+      "Target": "id=q7_2",
+      "Value": "on",
+      "Targets": [
+        "id=q7_2",
+        "name=7",
+        "xpath=//*[@id=\"q7_2\"]",
+        "xpath=//input[@id='q7_2']",
+        "xpath=//div[2]/input",
+        "css=#q7_2"
+      ]
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"questionnaire\"]/fieldset/section/div[3]/fieldset/div[2]/div[2]/label",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"questionnaire\"]/fieldset/section/div[3]/fieldset/div[2]/div[2]/label",
+        "xpath=//div[2]/label",
+        "css=#questionnaire > fieldset > section > div:nth-child(3) > fieldset > div.radio-btn-wrapper.answer-wrapper.flex-dir-col > div:nth-child(2) > label"
+      ]
+    },
+    {
+      "Command": "click",
+      "Target": "id=q7_2",
+      "Value": "",
+      "Targets": [
+        "id=q7_2",
+        "name=7",
+        "xpath=//*[@id=\"q7_2\"]",
+        "xpath=//input[@id='q7_2']",
+        "xpath=//div[2]/input",
+        "css=#q7_2"
+      ]
+    },
+    {
+      "Command": "type",
+      "Target": "id=q8_2",
+      "Value": "on",
+      "Targets": [
+        "id=q8_2",
+        "name=8",
+        "xpath=//*[@id=\"q8_2\"]",
+        "xpath=//input[@id='q8_2']",
+        "xpath=//div[4]/fieldset/div[2]/div[2]/input",
+        "css=#q8_2"
+      ]
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"questionnaire\"]/fieldset/section/div[4]/fieldset/div[2]/div[2]/label",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"questionnaire\"]/fieldset/section/div[4]/fieldset/div[2]/div[2]/label",
+        "xpath=//div[4]/fieldset/div[2]/div[2]/label",
+        "css=#questionnaire > fieldset > section > div:nth-child(4) > fieldset > div.radio-btn-wrapper.answer-wrapper.flex-dir-col > div:nth-child(2) > label"
+      ]
+    },
+    {
+      "Command": "click",
+      "Target": "id=q8_2",
+      "Value": "",
+      "Targets": [
+        "id=q8_2",
+        "name=8",
+        "xpath=//*[@id=\"q8_2\"]",
+        "xpath=//input[@id='q8_2']",
+        "xpath=//div[4]/fieldset/div[2]/div[2]/input",
+        "css=#q8_2"
+      ]
+    },
+    {
+      "Command": "type",
+      "Target": "id=q9_2",
+      "Value": "on",
+      "Targets": [
+        "id=q9_2",
+        "name=9",
+        "xpath=//*[@id=\"q9_2\"]",
+        "xpath=//input[@id='q9_2']",
+        "xpath=//div[5]/fieldset/div[2]/div[2]/input",
+        "css=#q9_2"
+      ]
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"questionnaire\"]/fieldset/section/div[5]/fieldset/div[2]/div[2]/label",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"questionnaire\"]/fieldset/section/div[5]/fieldset/div[2]/div[2]/label",
+        "xpath=//div[5]/fieldset/div[2]/div[2]/label",
+        "css=#questionnaire > fieldset > section > div:nth-child(5) > fieldset > div.radio-btn-wrapper.answer-wrapper.flex-dir-col > div:nth-child(2) > label"
+      ]
+    },
+    {
+      "Command": "click",
+      "Target": "id=q9_2",
+      "Value": "",
+      "Targets": [
+        "id=q9_2",
+        "name=9",
+        "xpath=//*[@id=\"q9_2\"]",
+        "xpath=//input[@id='q9_2']",
+        "xpath=//div[5]/fieldset/div[2]/div[2]/input",
+        "css=#q9_2"
+      ]
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"content\"]/div[3]/button",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"content\"]/div[3]/button",
+        "xpath=//button[@type='button']",
+        "xpath=//button",
+        "css=#content > div.footer-content-wrapper > button"
+      ]
+    },
+    {
+      "Command": "type",
+      "Target": "id=customRadio_1",
+      "Value": "on",
+      "Targets": [
+        "id=customRadio_1",
+        "name=covidDoseType",
+        "xpath=//*[@id=\"customRadio_1\"]",
+        "xpath=//input[@id='customRadio_1']",
+        "xpath=//input",
+        "css=#customRadio_1"
+      ]
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"generic\"]/section/div[2]/div/div/div/label",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"generic\"]/section/div[2]/div/div/div/label",
+        "xpath=//div/div/div/label",
+        "css=#generic > section > div.form-group > div > div > div:nth-child(1) > label"
+      ]
+    },
+    {
+      "Command": "click",
+      "Target": "id=customRadio_1",
+      "Value": "",
+      "Targets": [
+        "id=customRadio_1",
+        "name=covidDoseType",
+        "xpath=//*[@id=\"customRadio_1\"]",
+        "xpath=//input[@id='customRadio_1']",
+        "xpath=//input",
+        "css=#customRadio_1"
+      ]
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"content\"]/div[3]/button",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"content\"]/div[3]/button",
+        "xpath=//button[@type='submit']",
+        "xpath=//button",
+        "css=#content > div.footer-content-wrapper > button"
+      ]
+    },
+    {
+      "Command": "click",
+      "Target": "id=jurisdiction",
+      "Value": "",
+      "Targets": [
+        "id=jurisdiction",
+        "xpath=//*[@id=\"jurisdiction\"]",
+        "xpath=//select[@id='jurisdiction']",
+        "xpath=//select",
+        "css=#jurisdiction"
+      ]
+    },
+    {
+      "Command": "select",
+      "Target": "id=jurisdiction",
+      "Value": "label=Massachusetts",
+      "Targets": [
+        "id=jurisdiction",
+        "xpath=//*[@id=\"jurisdiction\"]",
+        "xpath=//select[@id='jurisdiction']",
+        "xpath=//select",
+        "css=#jurisdiction"
+      ]
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"content\"]/div[3]/button",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"content\"]/div[3]/button",
+        "xpath=//button[@type='submit']",
+        "xpath=//button",
+        "css=#content > div.footer-content-wrapper > button"
+      ]
+    },
+    {
+      "Command": "click",
+      "Target": "id=q1_0",
+      "Value": "",
+      "Targets": [
+        "id=q1_0",
+        "xpath=//*[@id=\"q1_0\"]",
+        "xpath=//input[@id='q1_0']",
+        "xpath=//input",
+        "css=#q1_0"
+      ]
+    },
+    {
+      "Command": "type",
+      "Target": "id=q1_0",
+      "Value": "AGE",
+      "Targets": [
+        "id=q1_0",
+        "xpath=//*[@id=\"q1_0\"]",
+        "xpath=//input[@id='q1_0']",
+        "xpath=//input",
+        "css=#q1_0"
+      ]
+    },
+    {
+      "Command": "type",
+      "Target": "id=q21",
+      "Value": "on",
+      "Targets": [
+        "id=q21",
+        "name=2",
+        "xpath=//*[@id=\"q21\"]",
+        "xpath=//input[@id='q21']",
+        "xpath=//div[2]/input",
+        "css=#q21"
+      ]
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"generic\"]/fieldset/section/div[3]/div/div/div[2]/label",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"generic\"]/fieldset/section/div[3]/div/div/div[2]/label",
+        "xpath=//div[2]/label",
+        "css=#generic > fieldset > section > div:nth-child(5) > div > div > div:nth-child(2) > label"
+      ]
+    },
+    {
+      "Command": "click",
+      "Target": "id=q21",
+      "Value": "",
+      "Targets": [
+        "id=q21",
+        "name=2",
+        "xpath=//*[@id=\"q21\"]",
+        "xpath=//input[@id='q21']",
+        "xpath=//div[2]/input",
+        "css=#q21"
+      ]
+    },
+    {
+      "Command": "type",
+      "Target": "id=qconsent",
+      "Value": "on",
+      "Targets": [
+        "id=qconsent",
+        "xpath=//*[@id=\"qconsent\"]",
+        "xpath=//input[@id='qconsent']",
+        "xpath=//div[4]/div/input",
+        "css=#qconsent"
+      ]
+    },
+    {
+      "Command": "click",
+      "Target": "id=consentText",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"content\"]/div[3]/button",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"content\"]/div[3]/button",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=address",
+      "Value": "",
+      "Targets": [
+        "id=address",
+        "xpath=//*[@id=\"address\"]",
+        "xpath=//input[@id='address']",
+        "xpath=//input",
+        "css=#address"
+      ]
+    },
+    {
+      "Command": "store",
+      "Target": "0",
+      "Value": "!TIMEOUT_WAIT"
+    },
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "return [\"ZIP1\", \"ZIP2\", \"ZIP3\"];",
+      "Value": "cities"
+    },
+    {
+      "Command": "forEach",
+      "Target": "cities",
+      "Value": "CITY"
+    },
+    {
+      "Command": "type",
+      "Target": "id=address",
+      "Value": "${CITY}",
+      "Targets": [
+        "id=address",
+        "xpath=//*[@id=\"address\"]",
+        "xpath=//input[@id='address']",
+        "xpath=//input",
+        "css=#address"
+      ]
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"generic\"]/div/div/div/button",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"generic\"]/div/div/div/button",
+        "xpath=//button[@type='button']",
+        "xpath=//button",
+        "css=#generic > div > div > div.flex-container > button"
+      ]
+    },
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!ErrorIgnore"
+    },
+    {
+      "Command": "store",
+      "Target": "0",
+      "Value": "count"
+    },
+    {
+      "Command": "do",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "return Number (${count}) + 1;",
+      "Value": "count"
+    },
+    {
+      "Command": "verifyElementNotPresent",
+      "Target": "xpath=//*[@id=\"generic\"]/div[2]/div/label",
+      "Value": ""
+    },
+    {
+      "Command": "verifyElementNotPresent",
+      "Target": "xpath=//*[@id=\"content\"]/div[2]/cvs-store-locator/div/div/div[2]/p",
+      "Value": ""
+    },
+    {
+      "Command": "repeatIf",
+      "Target": "${!statusOK} == true && ${count} < 10",
+      "Value": ""
+    },
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!statusOK"
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//*[@id=\"generic\"]/div[2]/div/label",
+      "Value": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!statusOK} == true",
+      "Value": ""
+    },
+    {
+      "Command": "break",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "repeatIf",
+      "Target": "${!statusOK} == false",
+      "Value": ""
+    },
+    {
+      "Command": "captureEntirePageScreenshot",
+      "Target": "cvspic",
+      "Value": ""
+    },
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "var xhttp = new XMLHttpRequest(); \nxhttp.onreadystatechange = function() {\n  if (this.readyState == 4 && this.status == 200) {\n    void(0);\n  }\n};\nxhttp.open(\"POST\", \"https://api.pushover.net/1/messages.json\", true);\nxhttp.setRequestHeader(\"Content-type\", \"application/x-www-form-urlencoded\");\nxhttp.send(\"token=PUSHOVERTOKEN&user=PUSHOVERUSER&title=Vaccine+Available&priority=1&message=Vaccine+Available\");",
+      "Value": ""
+    },
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "var audio = new Audio('https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg');audio.play();",
+      "Value": ""
+    }
+  ]
+}
